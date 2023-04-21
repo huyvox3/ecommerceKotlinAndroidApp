@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProductDetailsActivity">
+
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/materialCardView2"
+      android:layout_width="match_parent"
+      android:layout_height="250dp"
+
+      app:cardCornerRadius="7dp"
+
+      app:layout_constraintTop_toTopOf="parent">
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:iss_auto_cycle="true"
+        app:iss_delay="0"
+        app:iss_period="1000"
+
+        >
+
+    </com.denzcoskun.imageslider.ImageSlider>
+
+  </com.google.android.material.card.MaterialCardView>
+
+  <TextView
+      android:id="@+id/prodNameTv"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:text="TextView"
+      android:layout_marginEnd="12dp"
+      android:layout_marginTop="12dp"
+      android:textColor="@color/black"
+      android:textSize="14sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toStartOf="@+id/priceProdTv"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+
+  <TextView
+      android:id="@+id/priceProdTv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="12dp"
+      android:text="TextView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+
+  <TextView
+      android:id="@+id/prodDesTv"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:text="TextView"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toTopOf="@id/button6"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginHorizontal="12dp"
+      android:layout_marginTop="18dp"
+      app:layout_constraintTop_toBottomOf="@+id/prodNameTv"
+   />
+
+  <Button
+      android:id="@+id/button6"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="4dp"
+      android:text="Add to Cart"
+      android:padding="8dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+
+      app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

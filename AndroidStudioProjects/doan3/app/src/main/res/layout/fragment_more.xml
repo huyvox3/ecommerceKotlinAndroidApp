@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/grey"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.MoreFragment">
+  <LinearLayout
+     android:layout_margin="12dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+
+      android:weightSum="2">
+     <androidx.cardview.widget.CardView
+
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:cardCornerRadius="12dp">
+         <LinearLayout
+             android:layout_margin="12dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             >
+
+             <TextView
+                 android:layout_weight="1"
+                 android:id="@+id/usernameTv"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="UserName:"
+                 android:textStyle="bold"
+                 android:textSize="20sp"
+                 android:textColor="@color/black"
+
+
+                 >
+
+             </TextView>
+
+
+             <com.google.android.material.button.MaterialButton
+                 android:layout_weight="1"
+                 android:id="@+id/logoutBtn"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/white"
+                 android:backgroundTint="@color/colorPrimary"
+                 android:text="Log out">
+
+             </com.google.android.material.button.MaterialButton>
+         </LinearLayout>
+     </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+          android:id="@+id/rv"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          tools:listitem="@layout/all_order_item_layout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+         android:layout_marginBottom="40dp"
+        >
+
+
+
+      </androidx.recyclerview.widget.RecyclerView>
+  </LinearLayout>
+</FrameLayout>

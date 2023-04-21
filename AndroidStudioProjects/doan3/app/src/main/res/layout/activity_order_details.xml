@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.OrderDetailsActivity">
+
+    <TextView
+        android:id="@+id/emptyOrderDetailsTv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:text="Order Details Not Found"
+        android:textSize="36dp"
+        android:fontFamily="sans-serif-condensed-light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingVertical="300dp"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        >
+
+    </TextView>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:padding="10dp"
+
+        >
+
+        <TextView
+            android:id="@+id/orderIDTv"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="10dp"
+            android:layout_height="wrap_content"
+            android:text="123123123">
+
+        </TextView>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/orderPriceTv"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="Price: ">
+
+        </TextView>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/orderStatusTv"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="40dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="Status: ">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemDetailsRv"
+        android:layout_width="403dp"
+        android:layout_height="637dp"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        tools:listitem="@layout/item_order_line">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>
